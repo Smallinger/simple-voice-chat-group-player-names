@@ -6,7 +6,7 @@
 
 A NeoForge port of the popular Simple Voice Chat Group Player Names mod that displays player names next to group player heads in the [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat) HUD.
 
-![Mod Preview](https://via.placeholder.com/800x400.png?text=Add+Screenshot+Here)
+![Mod Preview](https://github.com/Smallinger/simple-voice-chat-group-player-names/blob/main/.github/media/icon.png?raw=true)
 
 ## ✨ Features
 
