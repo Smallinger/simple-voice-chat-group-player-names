@@ -1,0 +1,10 @@
+{
+  "svcgroupplayernames.configuration.onlyShowNamesWhenTalking": "Показывать имена только при разговоре",
+  "svcgroupplayernames.configuration.onlyShowNamesWhenTalking.tooltip": "Если включено, имена игроков будут отображаться только тогда, когда соответствующий игрок говорит.",
+  "svcgroupplayernames.configuration.transparencyWhenTalking": "Прозрачность при разговоре",
+  "svcgroupplayernames.configuration.transparencyWhenTalking.tooltip": "Устанавливает прозрачность имен игроков, когда соответствующий игрок говорит. 0 - полностью прозрачно, 100 - полностью непрозрачно.",
+  "svcgroupplayernames.configuration.transparencyWhenNotTalking": "Прозрачность при молчании",
+  "svcgroupplayernames.configuration.transparencyWhenNotTalking.tooltip": "Устанавливает прозрачность имен игроков, когда соответствующий игрок не говорит. 0 - полностью прозрачно, 100 - полностью непрозрачно.",
+  "svcgroupplayernames.configuration.useTextOutline": "Использовать контур текста",
+  "svcgroupplayernames.configuration.useTextOutline.tooltip": "Рисует темный контур вокруг имен игроков для лучшей видимости на любом фоне."
+}

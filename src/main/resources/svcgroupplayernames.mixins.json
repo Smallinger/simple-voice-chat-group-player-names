@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "de.smallinger.svcgroupplayernames.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"GroupChatManagerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"mixinextras": {
+		"minVersion": "0.5.0"
+	}
+}

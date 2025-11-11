@@ -1,0 +1,10 @@
+{
+  "svcgroupplayernames.configuration.onlyShowNamesWhenTalking": "Only show names when talking",
+  "svcgroupplayernames.configuration.onlyShowNamesWhenTalking.tooltip": "If enabled, player names will only be displayed when the respective player is talking.",
+  "svcgroupplayernames.configuration.transparencyWhenTalking": "Transparency when talking",
+  "svcgroupplayernames.configuration.transparencyWhenTalking.tooltip": "Sets the transparency of the player names when the respective player is talking. 0 is fully transparent, 100 is fully opaque.",
+  "svcgroupplayernames.configuration.transparencyWhenNotTalking": "Transparency when not talking",
+  "svcgroupplayernames.configuration.transparencyWhenNotTalking.tooltip": "Sets the transparency of the player names when the respective player is not talking. 0 is fully transparent, 100 is fully opaque.",
+  "svcgroupplayernames.configuration.useTextOutline": "Use text outline",
+  "svcgroupplayernames.configuration.useTextOutline.tooltip": "Draw a dark outline around player names for better visibility against any background."
+}
