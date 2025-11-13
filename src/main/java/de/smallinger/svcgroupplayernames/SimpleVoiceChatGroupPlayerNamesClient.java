@@ -6,6 +6,7 @@ import de.maxhenkel.voicechat.voice.client.GroupPlayerIconOrientation;
 import de.maxhenkel.voicechat.voice.common.PlayerState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
+import org.joml.Quaternionf;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -36,9 +37,9 @@ public class SimpleVoiceChatGroupPlayerNamesClient {
                                           PlayerState state,
                                           float scale,
                                           ClientVoicechat client) {
-        guiGraphics.pose().pushMatrix();
+        guiGraphics.pose().pushPose();
         float invScale = 1.0f / scale;
-        guiGraphics.pose().scale(invScale, invScale);
+        guiGraphics.pose().scale(invScale, invScale, invScale);
 
         int nameOffsetX = (int) (x + (width * scale) + (scale - 1) + 4 + scale - 1);
         int nameOffsetY = (int) ((y + scale - 1) + ((height * scale) / 2) - (float) (7 / 2) - 1);
@@ -48,7 +49,7 @@ public class SimpleVoiceChatGroupPlayerNamesClient {
         boolean horizontal = VoicechatClient.CLIENT_CONFIG.groupPlayerIconOrientation.get().equals(GroupPlayerIconOrientation.HORIZONTAL);
         
         if (horizontal) {
-            guiGraphics.pose().rotate((float) (Math.PI / 2));
+            guiGraphics.pose().mulPose(new Quaternionf().rotationZ((float) (Math.PI / 2)));
             if (hudX < 0 && hudY < 0) {
                 nameOffsetX = (int) (-Minecraft.getInstance().font.width(state.getName()) - (height * scale) - (scale - 1) - 4 - (scale - 1));
                 nameOffsetY = (int) (scale + (width * scale) / 2 - (float) (7 / 2) - 1);
@@ -73,7 +74,7 @@ public class SimpleVoiceChatGroupPlayerNamesClient {
         int transparencyWhenNotTalking = whiteWithAlpha(ModConfig.TRANSPARENCY_WHEN_NOT_TALKING.get());
         
         if (ModConfig.ONLY_SHOW_NAMES_WHEN_TALKING.get() && !client.getTalkCache().isTalking(state.getUuid())) {
-            guiGraphics.pose().popMatrix();
+            guiGraphics.pose().popPose();
             return;
         }
         
@@ -90,7 +91,7 @@ public class SimpleVoiceChatGroupPlayerNamesClient {
             useOutline
         );
         
-        guiGraphics.pose().popMatrix();
+        guiGraphics.pose().popPose();
     }
 
     public static int whiteWithAlpha(int percent) {

@@ -7,7 +7,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.fml.loading.FMLEnvironment;
 
 /**
  * Simple Voice Chat Group Player Names
@@ -29,7 +29,7 @@ public class SimpleVoiceChatGroupPlayerNames {
         modContainer.registerConfig(net.neoforged.fml.config.ModConfig.Type.CLIENT, ModConfig.SPEC);
         
         // Initialize client-side code only on client dist
-        if (FMLLoader.getCurrent().getDist().isClient()) {
+        if (FMLEnvironment.dist == Dist.CLIENT) {
             new SimpleVoiceChatGroupPlayerNamesClient(modEventBus, modContainer);
         }
     }
